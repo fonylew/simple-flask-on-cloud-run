@@ -12,7 +12,7 @@ cloud-build:
 cloud-run:
     read -p "Enter project_id: " PROJECT_ID; \
     read -p "Enter image name (with tag): " IMAGE_NAME; \
-    read -p "Enter Cloud Run name:" CLOUD_RUN_NAME;
+    read -p "Enter Cloud Run name:" CLOUD_RUN_NAME; \
     gcloud beta run deploy $CLOUD_RUN_NAME --image gcr.io/$PROJECT_ID/$IMAGE_NAME --allow-unauthenticated
 
 
